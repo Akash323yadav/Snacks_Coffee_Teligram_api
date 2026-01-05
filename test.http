@@ -1,0 +1,630 @@
+// ==============================
+// COFFEE – CLEANING
+// ==============================
+
+###
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "CLEANING",
+  "parameter": "BREWER_CLEANING",
+  "label": "Brewer Cleaning"
+}
+
+###
+PUT http://localhost:4000/api/coffee/CLEANING/BREWER_CLEANING
+Content-Type: application/json
+
+{
+  "title": "Brewer Cleaning",
+  "description": "Steps to clean the coffee brewer safely and properly.",
+  "steps": [
+    "Switch OFF the coffee machine",
+    "Open the front door",
+    "Remove the brewer unit carefully",
+    "Wash brewer with warm water only",
+    "Dry the brewer completely",
+    "Reinstall the brewer unit",
+    "Close the door and switch ON the machine"
+  ],
+  "video": "BAACAgUAAxkDAAIC9GlXpxxkWsayaI-QU4m1xRK27YaUAAKXHgACwRHAVr1R4jtKRZBfOAQ"
+}
+
+
+###
+POST http://localhost:4000/api/coffee/CLEANING/MIXER_CLEANING
+Content-Type: application/json
+
+{
+  "title": "Mixer Cleaning",
+  "description": "Steps to clean the coffee mixer properly and remove powder blockage.",
+  "steps": [
+    "Switch OFF the coffee machine",
+    "Open the mixer cover",
+    "Remove mixer blades carefully",
+    "Clean powder residue with dry cloth",
+    "Wash mixer parts with warm water",
+    "Dry all parts completely",
+    "Reassemble mixer blades",
+    "Close the cover and switch ON the machine"
+  ],
+  "video": "BAACAgUAAxkDAAIC9GlXpxxkWsayaI-QU4m1xRK27YaUAAKXHgACwRHAVr1R4jtKRZBfOAQ"
+}
+
+
+
+
+###
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "CLEANING",
+  "parameter": "MIXER_CLEANING",
+  "label": "Mixer Cleaning"
+}
+
+
+// ==============================
+// COFFEE – ERROR HANDLING
+// ==============================
+
+###
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "ERROR_HANDLING",
+  "parameter": "NO_WATER",
+  "label": "No Water"
+}
+
+
+// ==============================
+// COFFEE – REMOTE COMMAND
+// ==============================
+
+###
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "REMOTE_COMMAND",
+  "parameter": "DRINK_TEST",
+  "label": "Drink Test"
+}
+
+###
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "REMOTE_COMMAND",
+  "parameter": "RESTART_TEST",
+  "label": "Restart Test"
+}
+
+
+// ==============================
+// VENDING (NO CATEGORY)
+// ==============================
+
+###
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "COIL_CHANGE",
+  "label": "Coil Change"
+}
+
+###
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "MOTOR_CHANGE",
+  "label": "Motor Change"
+}
+
+###
+PUT http://localhost:4000/api/vending/MOTOR_CHANGE
+Content-Type: application/json
+
+{
+  "title": "Motor Change",
+  "description": "Steps to replace vending machine motor safely.",
+  "steps": [
+    "Switch OFF power supply",
+    "Open front door",
+    "Disconnect motor wiring",
+    "Remove faulty motor",
+    "Install new motor",
+    "Reconnect wiring",
+    "Test motor operation"
+  ],
+  "video": "BAACAgUAAxkDAAIC9GlXpxxkWsayaI-QU4m1xRK27YaUAAKXHgACwRHAVr1R4jtKRZBfOAQ"
+}
+
+
+###
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "WIFI_CHECK",
+  "label": "WiFi Check"
+}
+
+### VENDING – WIFI_CHECK CONTENT
+### VENDING – WIFI_CHECK CONTENT
+PUT http://localhost:4000/api/vending/WIFI_CHECK
+Content-Type: application/json
+
+{
+  "title": "WiFi Connectivity Check",
+  "description": "This guide helps to diagnose and resolve WiFi connectivity issues in the vending machine.",
+  "steps": [
+    "Check if WiFi router is powered ON",
+    "Verify internet availability",
+    "Restart the vending machine",
+    "Check signal strength",
+    "Reconnect WiFi from system settings",
+    "Confirm machine is online on dashboard"
+  ],
+  "video": "BAACAgUAAxkDAAIDhWlYsfo0bfuWMUOS9QjU7zxkRcz5AALVFgACwRHIVh21J0uPGwO6OAQ"
+}
+
+###
+PUT http://localhost:4000/api/vending/COIL_CHANGE
+Content-Type: application/json
+
+{
+  "title": "Coil Change",
+  "description": "Procedure to replace vending machine coil safely.",
+  "steps": [
+    "Switch OFF power supply",
+    "Open front door",
+    "Identify faulty coil",
+    "Remove old coil",
+    "Install new coil",
+    "Secure wiring properly",
+    "Test vending operation"
+  ],
+  "video": "BAACAgUAAxkDAAIC9GlXpxxkWsayaI-QU4m1xRK27YaUAAKXHgACwRHAVr1R4jtKRZBfOAQ"
+}
+
+###
+POST http://localhost:4000/api/vending/MOTOR_CHANGE
+Content-Type: application/json
+
+{
+  "title": "Motor Change",
+  "description": "Steps to replace vending machine motor safely.",
+  "steps": [
+    "Switch OFF power supply",
+    "Open front door",
+    "Disconnect motor wiring",
+    "Remove faulty motor",
+    "Install new motor",
+    "Reconnect wiring",
+    "Test motor operation"
+  ],
+  "video": "BAACAgUAAxkDAAIC9GlXpxxkWsayaI-QU4m1xRK27YaUAAKXHgACwRHAVr1R4jtKRZBfOAQ"
+}
+
+###
+PUT http://localhost:4000/api/vending/WIFI_CHECK
+Content-Type: application/json
+
+{
+  "title": "WiFi Connectivity Check",
+  "description": "This guide helps to diagnose and resolve WiFi connectivity issues in the vending machine.",
+  "steps": [
+    "Check if WiFi router is powered ON",
+    "Verify internet availability",
+    "Restart the vending machine",
+    "Check signal strength",
+    "Reconnect WiFi from system settings",
+    "Confirm machine is online on dashboard"
+  ],
+  "video": "BAACAgUAAxkDAAID22lY8KQcV4HCfWap1uXMOv4oUcKIAAL-FwACwRHIVrIN1zK8X_W3OAQ"
+}
+
+###
+POST http://localhost:4000/api/coffee/REMOTE_COMMAND/RESTART_TEST
+Content-Type: application/json
+
+{
+  "title": "Restart Test",
+  "description": "Remote command to restart coffee machine safely.",
+  "steps": [
+    "Send restart command",
+    "Machine will shut down",
+    "Machine will reboot automatically",
+    "Wait for ready status"
+  ],
+  "video": "BAACAgUAAxkDAAIC9GlXpxxkWsayaI-QU4m1xRK27YaUAAKXHgACwRHAVr1R4jtKRZBfOAQ"
+}
+
+
+###
+POST http://localhost:4000/api/coffee/REMOTE_COMMAND/DRINK_TEST
+Content-Type: application/json
+
+{
+  "title": "Drink Test",
+  "description": "Remote command to test drink dispensing mechanism.",
+  "steps": [
+    "Ensure cups are available",
+    "Run drink test command",
+    "Observe dispensing operation",
+    "Verify quantity and flow"
+  ],
+  "video": "BAACAgUAAxkDAAIDR2lXxpn_XfYfTTJ74oNqHrZ6rAHGAAIVHwACwRHAVvPQ4wkGFv2lOAQ"
+}
+
+
+
+PUT http://localhost:4000/api/coffee/ERROR_HANDLING/NO_WATER
+Content-Type: application/json
+
+{
+  "title": "No Water Error",
+  "description": "This guide explains how to resolve the no water error in the coffee machine.",
+  "steps": [
+    "Check the water tank level",
+    "Ensure water tank is placed properly",
+    "Check inlet pipe connection",
+    "Look for pipe blockage or leakage",
+    "Restart the coffee machine",
+    "If error persists, contact service support"
+  ],
+  "video": "BAACAgUAAxkDAAIDR2lXxpn_XfYfTTJ74oNqHrZ6rAHGAAIVHwACwRHAVvPQ4wkGFv2lOAQ"
+}
+
+
+
+
+###
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "ERROR_HANDLING",
+  "parameter": "DOOR_OPEN",
+  "label": "Door Open"
+}
+
+### CUP SENSOR ERROR
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "ERROR_HANDLING",
+  "parameter": "CUP_SENSOR_ERROR",
+  "label": "Cup Sensor Error"
+}
+
+### LOW TEMPERATURE
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "ERROR_HANDLING",
+  "parameter": "LOW_TEMPERATURE",
+  "label": "Low Temperature"
+}
+
+### HIGH TEMPERATURE
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "ERROR_HANDLING",
+  "parameter": "HIGH_TEMPERATURE",
+  "label": "High Temperature"
+}
+
+### MIXER BLOCK
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "coffee",
+  "category": "ERROR_HANDLING",
+  "parameter": "MIXER_BLOCK",
+  "label": "Mixer Block"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==============================
+// VENDING MACHINE – PARAMETERS
+// ==============================
+
+### COIL CHANGE
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "COIL_CHANGE",
+  "label": "Coil Change"
+}
+
+###
+PUT  http://localhost:4000/api/vending/COIL_CHANGE
+Content-Type: application/json
+
+{
+  "title": "Coil Change",
+  "description": "Procedure to replace vending machine coil safely.",
+  "steps": [
+    "Switch OFF the vending machine",
+    "Open the front door",
+    "Identify the faulty coil",
+    "Remove the old coil",
+    "Install the new coil",
+    "Secure wiring properly",
+    "Test vending operation"
+  ],
+  "video": "BAACAgUAAxkDAAIDtWlY4Jd47GKyQ49UcEBCl81OpqyyAAKUFwACwRHIVkr60PVhA5uzOAQ"
+}
+
+
+### MOTOR TO HOME
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "MOTOR_TO_HOME",
+  "label": "Motor To Home"
+}
+
+
+###
+PUT http://localhost:4000/api/vending/MOTOR_TO_HOME
+Content-Type: application/json
+
+{
+  "title": "Motor To Home",
+  "description": "Steps to bring the vending machine motor to home position.",
+  "steps": [
+    "Switch ON the vending machine",
+    "Enter service mode",
+    "Select motor home option",
+    "Allow motor to rotate",
+    "Confirm home position",
+    "Exit service mode"
+  ],
+  "video": "BAACAgUAAxkDAAIDvWlY4UvaZw0LmAABYbpIKxQLUq0rWwAClhcAAsERyFYln1xtoAG4qDgE"
+}
+
+
+### VMC FAILED
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "VMC_FAILED",
+  "label": "VMC Failed"
+}
+
+
+###
+PUT http://localhost:4000/api/vending/VMC_FAILED
+Content-Type: application/json
+
+{
+  "title": "VMC Failed",
+  "description": "Steps to diagnose vending machine controller (VMC) failure.",
+  "steps": [
+    "Check power supply to VMC",
+    "Inspect communication cables",
+    "Restart vending machine",
+    "Check error codes on display",
+    "Replace VMC if issue persists"
+  ],
+  "video": "BAACAgUAAxkDAAIDvmlY4XaQvnT7VRQ5FW_Qp4AxcvaNAAKXFwACwRHIVpwpxGs6xoWjOAQ"
+}
+
+
+### DISPLAY PROBLEM
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "DISPLAY_PROBLEM",
+  "label": "Display Problem"
+}
+
+###
+PUT http://localhost:4000/api/vending/DISPLAY_PROBLEM
+Content-Type: application/json
+
+{
+  "title": "Display Problem",
+  "description": "Troubleshooting steps for vending machine display issues.",
+  "steps": [
+    "Check display power connection",
+    "Inspect display cable",
+    "Restart vending machine",
+    "Adjust brightness settings",
+    "Replace display if not working"
+  ],
+  "video": "BAACAgUAAxkDAAIDv2lY4aIQy6LCjxGkz8KuXWWItF-aAAKZFwACwRHIVuHu4DXuMQdlOAQ"
+}
+
+
+### COIL TESTING
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "COIL_TESTING",
+  "label": "Coil Testing"
+}
+
+###
+PUT http://localhost:4000/api/vending/COIL_TESTING
+Content-Type: application/json
+
+{
+  "title": "Coil Testing",
+  "description": "Steps to test vending machine coil functionality.",
+  "steps": [
+    "Enter service mode",
+    "Select coil testing option",
+    "Trigger coil manually",
+    "Check coil rotation",
+    "Verify product drop"
+  ],
+  "video": "BAACAgUAAxkDAAIDwGlY4cgc7IbWDfI69KxBgtEZrGXiAAKcFwACwRHIVuGN9JZcHRxjOAQ"
+}
+
+
+### TEMPERATURE CHECKING
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "TEMPERATURE_CHECKING",
+  "label": "Temperature Checking"
+}
+
+
+###
+PUT http://localhost:4000/api/vending/TEMPERATURE_CHECKING
+Content-Type: application/json
+
+{
+  "title": "Temperature Checking",
+  "description": "Check and verify internal temperature of the vending machine.",
+  "steps": [
+    "Enter service menu",
+    "Check temperature sensor reading",
+    "Compare with standard range",
+    "Adjust cooling settings if required",
+    "Exit service menu"
+  ],
+  "video": "BAACAgUAAxkDAAIDwWlY4eiiTNGpGLCMT7Aqxj6tjvORAAKeFwACwRHIVseFaZJQEZpwOAQ"
+}
+
+
+### LINE CABLE INSTALL
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "LINE_CABLE_INSTALL",
+  "label": "Line Cable Install"
+}
+
+###
+PUT  http://localhost:4000/api/vending/LINE_CABLE_INSTALL
+Content-Type: application/json
+
+{
+  "title": "Line Cable Install",
+  "description": "Procedure to install or replace vending machine power line cable.",
+  "steps": [
+    "Switch OFF main power",
+    "Remove damaged line cable",
+    "Install new line cable",
+    "Secure cable connections",
+    "Switch ON power and test machine"
+  ],
+  "video": "BAACAgUAAxkDAAIDw2lY7-OL5tTUdPxQpBTSGHolDi84AAL3FwACwRHIVmdtlDfY0FFdOAQ"
+}
+
+
+### LINE CABLE INSTALL
+POST http://localhost:4000/api/parameters
+Content-Type: application/json
+
+{
+  "module": "vending",
+  "parameter": "DOUBLE_SLOT_COIL_CHANGE",
+  "label": "Double Slot Coil Change"
+}
+
+
+###
+PUT http://localhost:4000/api/vending/DOUBLE_SLOT_COIL_CHANGE
+Content-Type: application/json
+
+{
+  "title": "Double Slot Coil Change",
+  "description": "Steps to replace or adjust the double slot coil in the vending machine safely.",
+  "steps": [
+    "Switch OFF the vending machine power",
+    "Open the front door",
+    "Identify the double slot coil assembly",
+    "Disconnect coil wiring carefully",
+    "Remove the faulty double slot coil",
+    "Install the new double slot coil",
+    "Reconnect wiring securely",
+    "Test product drop from both slots"
+  ],
+  "video": "BAACAgUAAxkDAAIDwmlY4lN7h-PcUjbE4iuokYvoxNlCAAKhFwACwRHIVsPIDIiy2bmcOAQ"
+}
+
+###
+PUT http://localhost:4000/api/vending/MOTOR_CHANGE
+Content-Type: application/json
+
+{
+  "title": "Motor Change",
+  "description": "Steps to replace the vending machine motor safely and ensure proper operation.",
+  "steps": [
+    "Switch OFF the vending machine power",
+    "Open the front door of the machine",
+    "Locate the faulty motor",
+    "Disconnect motor wiring carefully",
+    "Remove the damaged motor",
+    "Install the new motor in position",
+    "Reconnect wiring securely",
+    "Switch ON power and test motor operation"
+  ],
+  "video": "BAACAgUAAxkDAAIC9GlXpxxkWsayaI-QU4m1xRK27YaUAAKXHgACwRHAVr1R4jtKRZBfOAQ"
+}
+
+
+
+###
+GET  http://localhost:4000/api/vending/MOTOR_CHANGE
+Content-Type: application/json

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Telegram Video Upload</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f6f8;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      width: 400px;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.1);
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      margin-top: 10px;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h3>Upload Video to Telegram</h3>
+  <input type="file" id="video" accept="video/mp4" />
+  <button id="btn">Upload</button>
+  <pre id="out">---</pre>
+</div>
+
+<script>
+const btn = document.getElementById("btn");
+const out = document.getElementById("out");
+const videoInput = document.getElementById("video");
+
+btn.onclick = async () => {
+  const file = videoInput.files[0];
+  if (!file) {
+    alert("Select video");
+    return;
+  }
+
+  out.innerText = "⏳ Uploading...";
+  btn.disabled = true;
+
+  const fd = new FormData();
+  fd.append("video", file);
+
+  try {
+    const res = await fetch("/api/upload/video", {
+      method: "POST",
+      body: fd
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      out.innerText =
+        "✅ Upload Successful\n\nTelegram File ID:\n" + data.fileId;
+    } else {
+      // 🔥 FIX: object ko string me convert
+      const errorMsg =
+        typeof data.error === "object"
+          ? data.error.description || JSON.stringify(data.error, null, 2)
+          : data.error;
+
+      out.innerText =
+        "❌ Upload Failed\n\nReason:\n" + errorMsg;
+    }
+
+  } catch (err) {
+    out.innerText = "❌ Error: " + err.message;
+  }
+
+  btn.disabled = false;
+};
+</script>
+
+</body>
+</html>

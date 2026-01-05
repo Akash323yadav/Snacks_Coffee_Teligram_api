@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Tester UI</title>
+
+  <!--  External CSS attach -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h2>API Manager UI</h2>
+
+    <label>Method</label>
+    <select id="method">
+      <option value="POST">POST</option>
+      <option value="PUT">PUT</option>
+      <option value="GET">GET</option>
+    </select>
+
+    <label>Module</label>
+    <input id="module" placeholder="coffee / vending">
+
+    <label>Category (optional)</label>
+    <input id="category" placeholder="CLEANING / ERROR_HANDLING">
+
+    <label>Parameter</label>
+    <input id="parameter" placeholder="MIXER_CLEANING">
+
+    <label>Title</label>
+    <input id="title">
+
+    <label>Description</label>
+    <textarea id="description"></textarea>
+
+    <label>Steps (comma separated)</label>
+    <textarea id="steps"></textarea>
+
+    <label>Upload Video</label>
+    <input type="file" id="video">
+
+    <button onclick="submitData()">Submit</button>
+
+    <pre id="result"></pre>
+
+    <label>Upload Video</label>
+<input type="file" id="video" accept="video/*">
+
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

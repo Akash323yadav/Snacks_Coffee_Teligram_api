@@ -1,0 +1,186 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #f9fafb);
+  color: #1f2937;
+  padding: 30px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 28px 32px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #111827;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* =========================
+   FILE INPUT
+========================= */
+input[type="file"] {
+  padding: 8px;
+  background-color: #f9fafb;
+  border: 1px dashed #c7d2fe;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #1e40af;
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  margin-top: 26px;
+  padding: 13px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   RESULT BOX
+========================= */
+pre {
+  margin-top: 28px;
+  background-color: #020617;
+  color: #e5e7eb;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  border-left: 4px solid #2563eb;
+}
+
+/* =========================
+   RESPONSE STATES (OPTIONAL)
+========================= */
+pre.success {
+  border-left-color: #22c55e;
+}
+
+pre.error {
+  border-left-color: #ef4444;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  .container {
+    padding: 22px;
+  }
+}
